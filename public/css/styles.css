@@ -1,0 +1,16 @@
+
+ul{
+    list-style-type:none;
+}
+
+ul li:hover{
+    cursor: pointer;
+}
+dl, ol, ul {
+    margin-top: 10px;
+    margin-bottom: -33px;
+}
+
+.w-50{
+    margin-left: -15px;
+}
