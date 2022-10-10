@@ -1,3 +1,4 @@
+
 <div class="w-full mt-6">
     <div class="bg-white overflow-auto">
         <table class="min-w-full bg-white">
@@ -19,13 +20,19 @@
                     <td class="w-1/3 text-left py-3 px-4">{{$patient->contact}}</td>
                     <td class="w-1/3 text-left py-3 px-4">{{$patient->email}}</td>
                     <td class="w-1/3 text-left py-3 px-4">{{$patient->blood_type}}</td>
+                    <td>
+                        <a href="{{route('patient.edit',$patient)}}">Edite</a>
+                    </td>
                     {{-- <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
                     <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td> --}}
                 </tr>
                 @empty
-               <p>No Patients</p>
+                <tr>
+                    <td>No Patients</td>
+                </tr>
                @endforelse
             </tbody>
         </table>
     </div>
 </div>
+
