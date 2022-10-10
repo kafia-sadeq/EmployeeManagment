@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('contact');
             $table->string('email');
+            $table->string('notes')->nullable();
+            $table->enum('blood_type',['A','o','AB+'])->nullable();
             $table->string('address')->nullable();
             $table->string('contact_partent')->nullable();
             $table->timestamps();

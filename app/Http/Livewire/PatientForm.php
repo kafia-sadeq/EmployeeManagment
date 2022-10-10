@@ -8,7 +8,7 @@ class PatientForm extends Component
 {    public $code;
      public $name;
      public $contact;
-     public $note;
+     public $notes;
      public $email;
 
     public function store(){
@@ -17,6 +17,8 @@ class PatientForm extends Component
             'name' => 'required',
             'contact' => 'required|min:6',
             'email'  =>'required|min:6',
+            'notes' =>'required'
+            
         ]);
 
    Patient::create($validatedData);
