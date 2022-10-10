@@ -34,6 +34,8 @@ Route::prefix('patients')->group(function () {
     Route::get('/', [PatientController::class, 'index'])->name('patient');
     Route::get('/create', [PatientController::class, 'create'])->name('patients_create');
     Route::get('/patient/edit/{patient}', [PatientController::class, 'edit'])->name('patient.edit');
+    Route::post('/patient/update/{patient}', [PatientController::class, 'update'])->name('patient.update');
+    
 });
 });
 

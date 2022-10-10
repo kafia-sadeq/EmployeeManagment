@@ -10,19 +10,31 @@ class PatientForm extends Component
      public $contact;
      public $notes;
      public $email;
+     public $sex;
+     public $blood_type;
+     public $address;
 
-    public function store(){
+     public function store(){
         $validatedData = $this->validate([
             'code' => 'required|min:6',
             'name' => 'required',
             'contact' => 'required|min:6',
             'email'  =>'required|min:6',
-            'notes' =>'required'
+            'notes' =>'required',
+            'address'=>'required'
             
         ]);
 
-   Patient::create($validatedData);
-  return  redirect()->route('patient')->with('message',"Successfully");
+    Patient::create([
+    'code' => $this->code,
+    'name' => $this->name,
+    'contact' => $this->contact,
+    'email'  =>$this->email,
+    'notes' =>$this->notes,
+    'address'=>$this->address,
+    'notes'=>$this->notes
+     ]);
+    return  redirect()->route('patient')->with('message',"Successfully");
     }
     public function render()
     {

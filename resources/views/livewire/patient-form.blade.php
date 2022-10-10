@@ -29,6 +29,14 @@
                         <input class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded" id="email" name="email" wire:model='email' type="text"  placeholder="Your Email" aria-label="Email">
                         @error('email') <span class="error text-red-300 p-3 my-5 rounded">{{ $message }}</span> @enderror
                     </div>
+                    
+                    <div class="mt-2">
+                        <label class="block text-sm text-gray-600" for="email">Address</label>
+                        <input class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded" id="email" name="address"  wire:model="address"
+                        type="text"  placeholder="Your Address" aria-label="Email">
+                        @error('address') <span class="error text-red-300 p-3 my-5 rounded">{{ $message }}</span> @enderror
+                    </div>
+
                     <div class="mt-2">
                         <label class="block text-sm text-gray-600" for="email">Content</label>
                         <input class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded" id="content" name="contact" wire:model='contact' type="text"
