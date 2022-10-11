@@ -36,8 +36,8 @@
 
                     <div class="mt-2">
                         <label class="block text-sm text-gray-600" for="email">Sexe</label>
-                        <select class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded"  name="sex" value="{{$patient->sex}}">
-                            <option selected="selected"></option>
+                        <select class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded"  name="sex" >
+                            <option >{{$patient->sex}}</option>
                             <option value="F">Femal</option>
                             <option value="M">Mal</option>
                         </select>
@@ -45,10 +45,10 @@
 
                     <div class="mt-2">
                         <label class="block text-sm text-gray-600" for="email">blood Type</label>
-                        <select class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded"  name="blood_type" value="{{$patient->blood_type}}">
-                            <option selected="selected"></option>
+                        <select class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded"  name="blood_type" >
+                            <option >{{$patient->blood_type}}</option>
                             <option value="A">A</option>
-                            <option value="O">B</option>
+                            <option value="B">B</option>
                             <option value="AB+">AB+</option>
                         </select>
                     </div> 
