@@ -9,6 +9,9 @@ use App\Http\Livewire\Profile;
 use App\Http\Middleware\Authenticate;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PatientController;
+use App\Http\Controllers\EmployerController;
+use App\Http\Livewire\Employer;
+use App\Http\Livewire\Employer\Create;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +32,7 @@ Route::middleware([Authenticate::class])->group(function () {
 Route::get('/',LoginRegister::class);
 Route::middleware(['userconnect'])->group(function () {
 Route::get('dashboard', [AuthController::class, 'index']);
+// Patients
 
 Route::prefix('patients')->group(function () {
     Route::get('/', [PatientController::class, 'index'])->name('patient');
@@ -36,6 +40,13 @@ Route::prefix('patients')->group(function () {
     Route::get('/patient/edit/{patient}', [PatientController::class, 'edit'])->name('patient.edit');
     Route::post('/patient/update/{patient}', [PatientController::class, 'update'])->name('patient.update');
     
+});
+
+// Employers
+Route::prefix('Employers')->group(function () {
+    Route::get('/', [EmployerController::class, 'index'])->name('employer');
+    Route::get('/create', [EmployerController::class, 'create'])->name('Employer_create');
+
 });
 });
 
